@@ -44,11 +44,15 @@ bhv-vault/
 └── requirements.txt      # Python Dependency Manifest
 ```
 
+
 ## 🔒 Security Architecture Highlights
 
 1. **Security Interception (Middleware):** The FastAPI gateway ensures all incoming requests are authenticated and authorized (401 rejection for invalid sessions) before reaching the processing engine.
 2. **Zero-Trust Retrieval Pipeline:** Clinicians can view encrypted vault files on the fly using `io.BytesIO` decryption, ensuring that unencrypted files are never saved to the local disk during viewing.
 3. **Automated Validation:** Pre-flight validation checks (via Bash and Python) ensure minimum hardware requirements and required ports are available prior to initializing the vault.
+
+
+<img width="809" height="258" alt="image" src="https://github.com/user-attachments/assets/4a10a4fe-e261-4496-8fda-21da2f620d26" />
 
 ## 🏃 Getting Started
 
@@ -95,3 +99,10 @@ To ensure BHV can operate smoothly on limited hardware (such as 10-year-old desk
 - **OOM Crash Prevention (10MB RAM):** The asynchronous chunked streaming keeps memory usage incredibly low. While a regular FastAPI server would attempt to load a 500MB payload directly into memory (crashing legacy hardware), BHV maintains a stable memory footprint of only ~10MB.
 - **Zero-Blocking UI (139 MB/s Ingestion):** The modular backend can ingest data at high speeds. It can store a 15MB high-resolution scan of a patient's artwork in approximately 0.1 seconds, guaranteeing the interface stays fully responsive for clinicians.
 - **Medical Data Fidelity (SHA-256 Integrity):** Precision is crucial in healthcare. Benchmark tests confirm that the AES-256 in-memory encryption and decryption processes do not alter a single byte of data. Hash verifications perfectly match the original plaintext with the decrypted outputs.
+<img width="1012" height="505" alt="image" src="https://github.com/user-attachments/assets/d13d7ec5-2407-4803-aa41-9c21040c16c4" />
+
+<img width="1043" height="312" alt="image" src="https://github.com/user-attachments/assets/bbf94880-11d9-437f-bf8f-bb229dabdb0b" />
+<img width="1008" height="557" alt="image" src="https://github.com/user-attachments/assets/eef5a1e8-a82d-4d02-8fad-54f820e88849" />
+
+
+

@@ -1,4 +1,4 @@
-# BHV: 🧠 Behavioral Health Vault
+# BHV: Behavioral Health Vault
 
 [![CI](https://github.com/CodeByRachit/Behavioral-Health-Vault/actions/workflows/ci.yml/badge.svg)](https://github.com/CodeByRachit/Behavioral-Health-Vault/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/CodeByRachit/Behavioral-Health-Vault/actions/workflows/codeql.yml/badge.svg)](https://github.com/CodeByRachit/Behavioral-Health-Vault/actions/workflows/codeql.yml)

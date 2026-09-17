@@ -38,4 +38,5 @@ jobs:
         OWNER_EMAIL: "dummy@example.com"
         OWNER_PASSWORD: "dummy"
       run: |
+        python -c "from app import app, db; ctx = app.app_context(); ctx.push(); db.create_all()"
         pytest test_auth.py test_crypto.py -v

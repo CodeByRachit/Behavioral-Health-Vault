@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+authors:
+  - family-names: "Yadav"
+    given-names: "Rachit"
+title: "Behavioral Health Vault"
+version: 1.1.0
+date-released: 2026-09-18
+url: "https://github.com/CodeByRachit/Behavioral-Health-Vault"
+repository-code: "https://github.com/CodeByRachit/Behavioral-Health-Vault"
+abstract: "A secure, high-performance medical vault designed for underfunded clinics. Features AES-256 in-memory encryption, searchable NoSQL metadata, and memory-efficient 64KB streaming to safely store patient narratives."
+keywords:
+  - healthcare
+  - cryptography
+  - zero-trust
+  - fastapi
+  - mongodb
+  - electronic-health-records
+license: "BSD-3-Clause"

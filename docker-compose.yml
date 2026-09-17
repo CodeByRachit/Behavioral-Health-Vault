@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/
+      # Make sure to generate secure keys for production!
+      - ENCRYPTION_KEY=VotJU4drubJqjpvgDgEEExr6mH5j3SY5clRR9NtYXg0=
+      - BHV_STREAM_KEY=b3a464355b990f4813c78572d465e056fa4db810a497ce6f8c3bfeca0957fe31
+      - BHV_SECRET_KEY=G6HZPApKWQwNUVGxALolIJoGWbEJ38j3BjqsnY05C8g=
+      - SECRET_KEY=default-secret-key-for-dev
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

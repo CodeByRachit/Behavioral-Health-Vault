@@ -65,41 +65,43 @@ bhv-vault/
 
 ## 🏃 Getting Started
 
-### Prerequisites
-- Python 3.10+
-- MongoDB instance (local or remote)
+### 🐳 Quick Start (Docker)
+The easiest way to run the entire vault (including MongoDB) is using Docker:
+```bash
+git clone https://github.com/CodeByRachit/Behavioral-Health-Vault.git
+cd Behavioral-Health-Vault
+docker compose up --build
+```
+The application will automatically start at `http://localhost:5000`.
 
-### Local Setup
+### 💻 Manual Local Setup
 
-1. **Clone the repository:**
+If you prefer to run it without Docker:
+
+1. **Clone & Setup Environment:**
    ```bash
    git clone https://github.com/CodeByRachit/Behavioral-Health-Vault.git
    cd Behavioral-Health-Vault
-   ```
-
-2. **Set up a virtual environment:**
-   ```bash
    python -m venv .venv
-   source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
-   ```
-
-3. **Install dependencies:**
-   ```bash
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
-4. **Environment Variables:**
-   Create a `.env` file in the root directory and configure your MongoDB connection and secrets:
+2. **Environment Variables:**
+   Create a `.env` file with required cryptographic keys (do NOT use these defaults in production):
    ```env
-   MONGODB_URL=mongodb://localhost:27017
-   SECRET_KEY=your_secret_key_here
+   MONGO_URI=mongodb://localhost:27017/
+   ENCRYPTION_KEY=VotJU4drubJqjpvgDgEEExr6mH5j3SY5clRR9NtYXg0=
+   BHV_STREAM_KEY=b3a464355b990f4813c78572d465e056fa4db810a497ce6f8c3bfeca0957fe31
+   BHV_SECRET_KEY=G6HZPApKWQwNUVGxALolIJoGWbEJ38j3BjqsnY05C8g=
+   SECRET_KEY=dev-secret
    ```
 
-5. **Run the Application:**
+3. **Run the Application:**
    ```bash
-   uvicorn app:app --reload
+   python app.py
    ```
-   The API gateway will be available at `http://localhost:8000`.
+   The vault will be accessible at `http://localhost:5000`.
 
 ## 📊 Performance & Benchmarks (Clinical Impact)
 

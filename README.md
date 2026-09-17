@@ -1,4 +1,13 @@
-# BHV: Behavioral Health Vault
+# BHV: 🧠 Behavioral Health Vault
+
+[![CI](https://github.com/CodeByRachit/Behavioral-Health-Vault/actions/workflows/ci.yml/badge.svg)](https://github.com/CodeByRachit/Behavioral-Health-Vault/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/CodeByRachit/Behavioral-Health-Vault/actions/workflows/codeql.yml/badge.svg)](https://github.com/CodeByRachit/Behavioral-Health-Vault/actions/workflows/codeql.yml)
+[![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+
+> Secure, memory-efficient, chunked file storage and access control system for highly sensitive clinical narratives and behavioral health data.
 
 The goal of this project is to provide a digitization approach to record the journey of recovery of people with serious mental illnesses and other social determinants. BHV (pronounced Beehive or Behave) aims to complement traditional Electronic Health Records (EHRs) by storing patient-provided images (photographs and scanned drawings) along with associated textual narratives, which may be provided by the patient or recorded by a social worker during an interview.
 
